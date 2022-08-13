@@ -4,6 +4,7 @@ from typing import List, Tuple
 # We assume that all lists passed to functions are the same length N
 # answers
 
+
 # 4 - n
 def question1(first_list: List[int], second_list: List[int]) -> List[int]:
     res: List[int] = []
