@@ -5,7 +5,7 @@ from typing import List, Tuple
 # answers
 
 
-# 4 - n
+# 1 - n^2
 def question1(first_list: List[int], second_list: List[int]) -> List[int]:
     res: List[int] = []
     for el_first_list in first_list:
@@ -14,14 +14,14 @@ def question1(first_list: List[int], second_list: List[int]) -> List[int]:
     return res
 
 
-# 1 - n
+# 2 - 1
 def question2(n: int) -> int:
     for _ in range(10):
         n **= 3
     return n
 
 
-# 6 - log n
+# 3 - n^2
 def question3(first_list: List[int], second_list: List[int]) -> List[int]:
     temp: List[int] = first_list[:]
     for el_second_list in second_list:
@@ -35,7 +35,7 @@ def question3(first_list: List[int], second_list: List[int]) -> List[int]:
     return temp
 
 
-# 5 - n^2
+# 4 - n
 def question4(input_list: List[int]) -> int:
     res: int = 0
     for el in input_list:
@@ -44,7 +44,7 @@ def question4(input_list: List[int]) -> int:
     return res
 
 
-# 3 - n^2
+# 5 - n^2
 def question5(n: int) -> List[Tuple[int, int]]:
     res: List[Tuple[int, int]] = []
     for i in range(n):
@@ -53,7 +53,7 @@ def question5(n: int) -> List[Tuple[int, int]]:
     return res
 
 
-# 2 - 1
+# 6 - log(n)
 def question6(n: int) -> int:
     while n > 1:
         n /= 2
