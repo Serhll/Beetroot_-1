@@ -1,7 +1,7 @@
 import random
 
 #############################################################################
-# LESSONS_3_TASK_#1
+# LESSONS_5_TASK_#1
 """The Guessing Game. Write a program that generates a random number 
 between 1 and 10 and lets the user guess what number was generated.
 The result should be sent back to the user via a print statement."""
@@ -21,7 +21,7 @@ while True:
             f' Your number is {your_numbers} more than {number_random_string}')
 
 #############################################################################
-# LESSONS_3_TASK_#2
+# LESSONS_5_TASK_#2
 print('*' * 80)
 print('Task_2')
 """The birthday greeting program.
@@ -34,7 +34,7 @@ print(f'Hello {name.upper()}, on your next birthday you’ll '
       f'be {age + 1} years!')
 
 #############################################################################
-# LESSONS_3_TASK_#3
+# LESSONS_5_TASK_#3
 print('*' * 80)
 print('Task_3')
 """Words combination. Create a program that reads an input string and then 
