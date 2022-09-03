@@ -34,7 +34,7 @@ select
     departments.depart_name
 from employees
     join departments using (department_id)
-    where employees.department_id = 40 or 80
+    where employees.department_id in (40, 80)
 """
 for item in select_query(connection, FullnameDepCityState):
     print(item)
@@ -48,12 +48,12 @@ for item in select_query(connection, AllDepartment):
     print(item)
 print('*' * 80)
 ###################################################
-# Не знайшов таблицю з менеджерами
 EmployeeAndManageName = """
 select
     employees.first_name,
-    employees.manager_id
+    manager.first_name
 from employees
+join employees manager on employees.manager_id = manager.employee_id
 """
 for item in select_query(connection, EmployeeAndManageName):
     print(item)
@@ -74,11 +74,12 @@ print('*' * 80)
 ###################################################
 JobTitleAvgSalary = """
 select
-    jobs.job_title,
-    (jobs.min_salary + jobs.max_salary)/2,
-    employees.first_name || ' ' || employees.last_name
-from jobs
-    join employees using (job_id)
+    job_title,
+    AVG(salary)
+from employees
+join jobs on employees.job_id = jobs.job_id
+GROUP BY job_title order by AVG(salary) desc 
+
 """
 for item in select_query(connection, JobTitleAvgSalary):
     print(item)
