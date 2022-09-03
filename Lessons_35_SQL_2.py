@@ -34,7 +34,7 @@ select
     departments.depart_name
 from employees
     join departments using (department_id)
-    where employees.department_id = 40
+    where employees.department_id = 40 or 80
 """
 for item in select_query(connection, FullnameDepCityState):
     print(item)
@@ -98,3 +98,7 @@ for item in select_query(connection, SalaryEmplLondon):
     print(item)
 print('*' * 80)
 ##################################################
+# NumEmplOfDep = """
+# select
+#     departments
+# """
