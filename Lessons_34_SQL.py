@@ -18,7 +18,7 @@ workers_table = '''create table if not exists Workers (
     age integer,
     gender text not null,
     id_JobTitle integer not null,
-    foreign key (id_JobTitle) references JobTitle(id)
+    foreign key (id_JobTitle) references JobTitle(id)   
 );
 '''
 # execute_query(connection, job_title_table)
